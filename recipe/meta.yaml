@@ -1,4 +1,4 @@
-{% set version = "0.4-46" %}
+{% set version = "0.4-47" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RWeka_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RWeka/RWeka_{{ version }}.tar.gz
-  sha256: 660555781703c19b994c9dcfc9e7d8312c30b02539f38cd3948bfc33d9f94b67
+  sha256: 1c65257098a6ea17a1c3e16242638e159a72074c6ff658cb04275616de5c354d
 
 build:
-  number: 3
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -38,8 +38,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=RWeka
   license: GPL-2.0-only
-  summary: An R interface to Weka (Version 3.9.3). Weka is a collection of machine learning algorithms for data mining tasks written in Java, containing tools for data pre-processing, classification, regression, clustering, association rules, and visualization.  Package 'RWeka' contains the interface code, the Weka jar is
-    in a separate package 'RWekajars'.  For more information on Weka see <http://www.cs.waikato.ac.nz/ml/weka/>.
+  summary: An R interface to Weka (Version 3.9.3). Weka is a collection of machine learning algorithms for data mining tasks written in Java, containing tools for data pre-processing, classification, regression, clustering, association rules, and visualization.  Package 'RWeka' contains the interface code, the Weka jar
+    is in a separate package 'RWekajars'.  For more information on Weka see <http://www.cs.waikato.ac.nz/ml/weka/>.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
