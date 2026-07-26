@@ -1,15 +1,15 @@
-{% set version = "0.4-49" %}
+{% set version = "0.4-50" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-rweka
-  version: "{{ version|replace('-', '_') }}"
+  version: {{ version|replace('-', '_') }}
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/RWeka_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RWeka/RWeka_{{ version }}.tar.gz
-  sha256: bcd042213d8bcbf8a425fcbdf684d41702c37e1211e66d0c491d07a97af8d943
+  sha256: b7bd239460f37f8d7e088771076e9a7b480ca70c4ad01b3d778b7d3ca65808c3
 
 build:
   number: 0
